@@ -97,5 +97,96 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(heroSection);
 });
 
+// spark effect 
+
+const canvas = document.getElementById("sparkCanvas");
+const ctx = canvas.getContext("2d");
+
+// Configurable settings
+const sparkColor = "#997A93";
+const sparkSize = 10;
+const sparkRadius = 15;
+const sparkCount = 8;
+const duration = 400;
+const easing = "ease-out";
+const extraScale = 1.0;
+
+// Resize canvas to full window
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+// Easing function
+function easeFunc(t) {
+  switch (easing) {
+    case "linear":
+      return t;
+    case "ease-in":
+      return t * t;
+    case "ease-in-out":
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    default:
+      return t * (2 - t); // ease-out
+  }
+}
+
+const sparks = [];
+
+function draw(timestamp) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = sparks.length - 1; i >= 0; i--) {
+    const spark = sparks[i];
+    const elapsed = timestamp - spark.startTime;
+
+    if (elapsed >= duration) {
+      sparks.splice(i, 1);
+      continue;
+    }
+
+    const progress = elapsed / duration;
+    const eased = easeFunc(progress);
+
+    const distance = eased * sparkRadius * extraScale;
+    const lineLength = sparkSize * (1 - eased);
+
+    const x1 = spark.x + distance * Math.cos(spark.angle);
+    const y1 = spark.y + distance * Math.sin(spark.angle);
+    const x2 = spark.x + (distance + lineLength) * Math.cos(spark.angle);
+    const y2 = spark.y + (distance + lineLength) * Math.sin(spark.angle);
+
+    ctx.strokeStyle = sparkColor;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+  }
+
+  requestAnimationFrame(draw);
+}
+
+// Start animation
+requestAnimationFrame(draw);
+
+// Handle click
+document.addEventListener("click", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  const now = performance.now();
+
+  for (let i = 0; i < sparkCount; i++) {
+    const angle = (2 * Math.PI * i) / sparkCount;
+    sparks.push({
+      x,
+      y,
+      angle,
+      startTime: now,
+    });
+  }
+});
 
 

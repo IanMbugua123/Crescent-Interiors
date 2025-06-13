@@ -10,6 +10,18 @@
       color: var(--dark-color);
       overflow-x: hidden;
     }
+
+    #sparkCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      display: block;
+    }
+
     
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;

@@ -12,15 +12,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- Favicon -->  
   <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
-   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <canvas id="sparkCanvas"></canvas>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Crescent Interiors</a>
+      <a class="navbar-brand" href="#">Crescent Interior Solutions</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,7 +69,7 @@
           <div class="carousel-caption">
             <h1 class="hero-title">Bespoke Solutions</h1>
             <p class="hero-subtitle">Tailored designs for your unique lifestyle</p>
-            <a href="#contact" class="btn btn-primary">Explore Designs</a>
+            <a href="#services" class="btn btn-primary">Explore Designs</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -75,7 +77,7 @@
           <div class="carousel-caption">
             <h1 class="hero-title">Timeless Elegance</h1>
             <p class="hero-subtitle">Where comfort meets sophistication</p>
-            <a href="#contact" class="btn btn-primary">View Portfolio</a>
+            <a href="#services" class="btn btn-primary">View Services</a>
           </div>
         </div>
       </div>
@@ -113,7 +115,7 @@
   <div class="container">
     <div class="row">
 
-      <!-- 1. Soundproofing -->
+      <!-- . Soundproofing -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card card h-100">
           <div class="card-body text-center p-4">
@@ -128,7 +130,7 @@
         </div>
       </div>
 
-      <!-- 2. Gypsum -->
+      <!-- . Gypsum -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card card h-100">
           <div class="card-body text-center p-4">
@@ -143,115 +145,6 @@
         </div>
       </div>
 
-      <!-- 3. Fitting -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-hammer"></i></div>
-            <h4 class="card-title">Fitting Solutions</h4>
-            <p class="card-text">Professional fitting for a wide range of interior components, ensuring seamless integration.</p>
-            <a href="img/Fitting.jpg" class="btn btn-outline-primary glightbox" data-gallery="fitting">View More Photos</a>
-            <a href="img/Fitting Solutions.jpg" class="glightbox d-none" data-gallery="fitting"></a>
-            <a href="img/Fitting (2).jpg" class="glightbox d-none" data-gallery="fitting"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Interior Painting -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
-            <h4 class="card-title">Interior Painting</h4>
-            <p class="card-text">Expert painting services that bring color and character to your spaces.</p>
-            <a href="img/painting.jpg" class="btn btn-outline-primary glightbox" data-gallery="painting">View More Photos</a>
-            <a href="img/painting2.jpg" class="glightbox d-none" data-gallery="painting"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. Wainscoting -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-border-style"></i></div>
-            <h4 class="card-title">Wainscoting Services</h4>
-            <p class="card-text">Elegant wall paneling to add style and protection to your interiors.</p>
-            <a href="img/Wainscoting.jpg" class="btn btn-outline-primary glightbox" data-gallery="wainscoting">View More Photos</a>
-            <a href="img/Wainscoting (2).jpg" class="glightbox d-none" data-gallery="wainscoting"></a>
-            <a href="img/Wainscoting (3).jpg" class="glightbox d-none" data-gallery="wainscoting"></a>
-            <a href="img/Wainscoting (4).jpg" class="glightbox d-none" data-gallery="wainscoting"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6. Furniture -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-couch"></i></div>
-            <h4 class="card-title">Furniture Supply</h4>
-            <p class="card-text">Quality furniture pieces that blend style, comfort, and durability.</p>
-            <a href="img/furniture1.jpg" class="btn btn-outline-primary glightbox" data-gallery="furniture">View More Photos</a>
-            <a href="img/furniture2.jpg" class="glightbox d-none" data-gallery="furniture"></a>
-          </div>
-        </div>
-      </div>
-
-      
-
-      <!-- Cabinets -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-door-closed"></i></div>
-            <h4 class="card-title">Kitchen Cabinets & Wardrobes</h4>
-            <p class="card-text">Custom design and installation of cabinets and wardrobes to suit your lifestyle and space.</p>
-            <a href="img/Kitchen Cabinates.jpg" class="btn btn-outline-primary glightbox" data-gallery="cabinets">View More Photos</a>
-            <a href="img/Kitchen Cabinates (2).jpg" class="glightbox d-none" data-gallery="cabinets"></a>
-            <a href="img/View 3.jpg" class="glightbox d-none" data-gallery="cabinets"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slatted Panels -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-grip-horizontal"></i></div>
-            <h4 class="card-title">Slatted Panels</h4>
-            <p class="card-text">Supply and installation of modern slatted panels for decorative and acoustic purposes.</p>
-            <a href="img/View !.jpg" class="btn btn-outline-primary glightbox" data-gallery="slatted">View More Photos</a>
-            <a href="img/slatted2.jpg" class="glightbox d-none" data-gallery="slatted"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- TV Wall Mounting -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-tv"></i></div>
-            <h4 class="card-title">TV Wall Mounting</h4>
-            <p class="card-text">Precise and secure TV mounting services tailored to your room layout and viewing needs.</p>
-            <a href="img/tv1.jpg" class="btn btn-outline-primary glightbox" data-gallery="tv">View More Photos</a>
-            <a href="img/tv2.jpg" class="glightbox d-none" data-gallery="tv"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Studios -->
-      <div class="col-md-6 col-lg-4">
-        <div class="service-card card h-100">
-          <div class="card-body text-center p-4">
-            <div class="service-icon"><i class="fas fa-microphone-alt"></i></div>
-            <h4 class="card-title">Studios, Churches & TV Stations</h4>
-            <p class="card-text">Custom acoustic setups for recording studios, podcast booths, churches, and broadcast rooms.</p>
-            <a href="img/studio.jpg" class="btn btn-outline-primary glightbox" data-gallery="studios">View More Photos</a>
-            <a href="img/place.jpg" class="glightbox d-none" data-gallery="studios"></a>
-          </div>
-        </div>
-      </div>
 
       <!-- Acoustic Panels -->
       <div class="col-md-6 col-lg-4">
@@ -268,6 +161,114 @@
         </div>
       </div>
 
+       <!-- Slatted Panels -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-grip-horizontal"></i></div>
+            <h4 class="card-title">Slatted Panels</h4>
+            <p class="card-text">Supply and installation of modern slatted panels for decorative and acoustic purposes.</p>
+            <a href="img/View !.jpg" class="btn btn-outline-primary glightbox" data-gallery="slatted">View More Photos</a>
+            <a href="img/slatted2.jpg" class="glightbox d-none" data-gallery="slatted"></a>
+          </div>
+        </div>
+      </div>
+
+       <!-- Studios -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-microphone-alt"></i></div>
+            <h4 class="card-title">Studios, Churches & TV Stations</h4>
+            <p class="card-text">Custom acoustic setups for recording studios, podcast booths, churches, and broadcast rooms.</p>
+            <a href="img/studio.jpg" class="btn btn-outline-primary glightbox" data-gallery="studios">View More Photos</a>
+            <a href="img/place.jpg" class="glightbox d-none" data-gallery="studios"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- . Fitting -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-hammer"></i></div>
+            <h4 class="card-title">Fitting Solutions</h4>
+            <p class="card-text">Professional fitting for a wide range of interior components, ensuring seamless integration.</p>
+            <a href="img/Fitting.jpg" class="btn btn-outline-primary glightbox" data-gallery="fitting">View More Photos</a>
+            <a href="img/Fitting Solutions.jpg" class="glightbox d-none" data-gallery="fitting"></a>
+            <a href="img/Fitting (2).jpg" class="glightbox d-none" data-gallery="fitting"></a>
+          </div>
+        </div>
+      </div>
+
+      <!--  Interior Painting -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+            <h4 class="card-title">Interior Painting</h4>
+            <p class="card-text">Expert painting services that bring color and character to your spaces.</p>
+            <a href="img/painting.jpg" class="btn btn-outline-primary glightbox" data-gallery="painting">View More Photos</a>
+            <a href="img/painting2.jpg" class="glightbox d-none" data-gallery="painting"></a>
+          </div>
+        </div>
+      </div>
+
+      <!--  Wainscoting -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-border-style"></i></div>
+            <h4 class="card-title">Wainscoting Services</h4>
+            <p class="card-text">Elegant wall paneling to add style and protection to your interiors.</p>
+            <a href="img/Wainscoting.jpg" class="btn btn-outline-primary glightbox" data-gallery="wainscoting">View More Photos</a>
+            <a href="img/Wainscoting (2).jpg" class="glightbox d-none" data-gallery="wainscoting"></a>
+            <a href="img/Wainscoting (3).jpg" class="glightbox d-none" data-gallery="wainscoting"></a>
+            <a href="img/Wainscoting (4).jpg" class="glightbox d-none" data-gallery="wainscoting"></a>
+          </div>
+        </div>
+      </div>
+
+      <!--  Furniture -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-couch"></i></div>
+            <h4 class="card-title">Furniture Supply</h4>
+            <p class="card-text">Quality furniture pieces that blend style, comfort, and durability.</p>
+            <a href="img/furniture1.jpg" class="btn btn-outline-primary glightbox" data-gallery="furniture">View More Photos</a>
+            <a href="img/furniture2.jpg" class="glightbox d-none" data-gallery="furniture"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cabinets -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-door-closed"></i></div>
+            <h4 class="card-title">Kitchen Cabinets & Wardrobes</h4>
+            <p class="card-text">Custom design and installation of cabinets and wardrobes to suit your lifestyle and space.</p>
+            <a href="img/Kitchen Cabinates.jpg" class="btn btn-outline-primary glightbox" data-gallery="cabinets">View More Photos</a>
+            <a href="img/Kitchen Cabinates (2).jpg" class="glightbox d-none" data-gallery="cabinets"></a>
+            <a href="img/View 3.jpg" class="glightbox d-none" data-gallery="cabinets"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TV Wall Mounting -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card card h-100">
+          <div class="card-body text-center p-4">
+            <div class="service-icon"><i class="fas fa-tv"></i></div>
+            <h4 class="card-title">TV Wall Mounting</h4>
+            <p class="card-text">Precise and secure TV mounting services tailored to your room layout and viewing needs.</p>
+            <a href="img/tv1.jpg" class="btn btn-outline-primary glightbox" data-gallery="tv">View More Photos</a>
+            <a href="img/tv2.jpg" class="glightbox d-none" data-gallery="tv"></a>
+          </div>
+        </div>
+      </div>
+      
       <!-- Carpets -->
       <div class="col-md-6 col-lg-4">
         <div class="service-card card h-100">
@@ -348,7 +349,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <a href="#" class="footer-logo d-block mb-3">Crescent Interiors</a>
+          <a href="#" class="footer-logo d-block mb-3">Crescent Interior Solutions</a>
           <p class="mb-4">Creating beautiful, functional spaces that inspire and delight. Our passion for design transforms houses into homes and workplaces into inspiring environments.</p>
           <div class="social-links">
             <a href="https://www.facebook.com/share/19LJmdfR46/" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -362,8 +363,6 @@
             <li class="mb-2"><a href="#home" class="footer-link">Home</a></li>
             <li class="mb-2"><a href="#about" class="footer-link">About Us</a></li>
             <li class="mb-2"><a href="#services" class="footer-link">Services</a></li>
-            <li class="mb-2"><a href="#portfolio" class="footer-link">Portfolio</a></li>
-            <li class="mb-2"><a href="#testimonials" class="footer-link">Testimonials</a></li>
             <li class="mb-2"><a href="#contact" class="footer-link">Contact</a></li>
           </ul>
         </div>
@@ -384,7 +383,7 @@
       <hr class="mt-5 mb-4" style="border-color: rgba(255, 255, 255, 0.1);">
       <div class="row">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-0">&copy; 2025 Crescent Interiors. All rights reserved.</p>
+          <p class="mb-0">&copy; 2025 Crescent Interior Solutions. All rights reserved.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p class="mb-0">
